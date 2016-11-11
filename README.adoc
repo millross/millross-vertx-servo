@@ -1,2 +1,5 @@
 # millross-vertx-servo
+
 Simple project to play around with servo for metrics gathering. Primarily for learning servo rather than anything else.
+
+Consists of a simple webserver with a specific endpoint which will update a custom metric value to be sent to servo. The aim is then to write out via servo to a dashboard to be configured separately.
