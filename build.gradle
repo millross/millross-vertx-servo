@@ -6,6 +6,7 @@ buildscript {
     ext {
         kotlin_version = '1.0.5'
         vertx_version = "3.3.3"
+        servo_version = "0.12.11"
     }
 
     repositories {
@@ -44,4 +45,5 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "io.vertx:vertx-web:$vertx_version"
+    compile "com.netflix.servo:servo-core:$servo_version"
 }
