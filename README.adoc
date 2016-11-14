@@ -2,4 +2,13 @@
 
 Simple project to play around with servo for metrics gathering. Primarily for learning servo rather than anything else.
 
-Consists of a simple webserver with a specific endpoint which will update a custom metric value to be sent to servo. The aim is then to write out via servo to a dashboard to be configured separately.
+Consists of a simple webserver with a specific endpoint which will update a custom metric value to be sent to servo. The
+aim is then to write out via servo to a dashboard to be configured separately.
+
+I used graphite as the dashboarding technology for testing (hence the graphite-servo dependency) via the docker file
+here https://github.com/nickstenning/docker-graphite
+
+Note that if using docker on OS X, when your Mac sleeps, the time as observed by your container will drift, possibly
+causing data to appear to go missing. The only mechanism I have identified to resolve this is to restart docker
+(restarting the container is not sufficient). So if you're not seeing data when you expect to, the first move should be
+to run bash inside your container, and dheck the system time.
